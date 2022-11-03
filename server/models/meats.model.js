@@ -3,9 +3,25 @@ const mongoose = require("mongoose");
 const MeatSchema = {
     name: {
         type: String,
-        required: [true, "name is required"],
+        required: [true, "name of product is required"],
         minLength: [3, "Name must be at least 3 characters"],
     },
+    type: {
+        type: String,
+        required: [true, "type of meat is required"],
+        minLength: [3, "Type must be at least 3 characters"],
+    },
+    description: {
+        type: String,
+        required: [true, "product description is required"],
+        minLength: [3, "Description must be at least 3 characters"],
+    },
+    tray_size: {
+        type: Number,
+        required: [true, "tray size is required"],
+        minLength: [1, "tray size must be at least 1 character"],
+        maxLength: [2, "tray size can be no more than 2 characters"]
+    }
 };
 
 module.exports = mongoose.model("Meat", MeatSchema);

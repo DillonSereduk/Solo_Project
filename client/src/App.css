@@ -1,38 +1,212 @@
-.App {
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar -------------------------------------------------------> */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  
+}
+.nav-top {
+  background: white;
+}
+
+.nav {
+  width: 1000px;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-title {
+  font-size: 60px;
+  margin-left: 10px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.back-home {
+  margin-left: 100px;
+  font-size: 20px;
+  color: grey;
+}
+
+.log-out {
+  margin-right: 10px;
+  font-size: 20px;
+  color: grey;
+}
+
+.nav_bottom {
+  background: white;
+}
+
+.nav-sub {
+  width: 1000px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  align-items: center;
+}
+
+.nav-links {
+  width: 990px;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-divider {
+  border: solid black;
+  width: 990px;
+  border-width: 2px;
+  margin-top: 10px;
+}
+
+.nav-picture {
+  display: flex;
+  justify-content: center;
+}
+
+/* Main content -------------------------------------------------------------> */
+
+.title-box {
+  width: 1000px;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.product_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  text-decoration: none;
+}
+
+.add_product {
+  display: block;
+  background-color: blue;
+  color: white;
+  box-shadow: black 3px 3px;
+  height: 30px;
+  width: 200px;
+  font-size: 20px;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 50px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.create_schematic {
+  display: block;
+  background-color: blue;
+  color: white;
+  box-shadow: black 3px 3px;
+  height: 30px;
+  width: 200px;
+  font-size: 20px;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 50px;
+}
+
+.main-content {
+  width: 990px;
+  margin: auto;
+}
+
+.content-top {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-top {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 15px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  border: solid 2px black ;
+  border-radius: 10px;
+  width: 400px;
+  height: 250px;
+  margin: auto;
+}
+
+.form-input {
+  display: block;
+  text-align: left;
+  margin: auto;
+}
+
+.form-control {
+  text-align: center;
+}
+
+.add_new_product {
+  display: block;
+  background-color: blue;
   color: white;
+  box-shadow: black 3px 3px;
+  height: 30px;
+  width: 200px;
+  font-size: 20px;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 50px;
+  margin-right: 10px;
+  text-decoration: none;
+  margin: auto;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.table, td{
+  width: 990px;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.description {
+  margin-top: 15px;
+  width: 990px;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
