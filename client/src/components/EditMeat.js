@@ -56,6 +56,7 @@ const EditMeat = (props) => {
     };
     return (
         <>
+            <body>
                 <div class="nav-top">
                     <main class="nav">
                         <section class="nav-left">
@@ -147,7 +148,7 @@ const EditMeat = (props) => {
                                     
                     </section>
                     
-                
+                </body>
             </>
         );
     };

@@ -3,7 +3,6 @@ import axios from "axios";
 import "../App.css";
 import { Link } from "react-router-dom";
 
-
 const DisplayAll = () => {
     const [allMeats, setAllMeats] = useState([]);
     useEffect(() => {
@@ -37,74 +36,70 @@ const DisplayAll = () => {
     return (
         <>
             <body>
-                <div class="nav-top">
-                    <main class="nav">
-                        <section class="nav-left">
-                            <h1 class="nav-title"><strong>Meat Schematic Creator</strong></h1>
-                        </section>
-                        <section class="nav-right">
-                            <p class="log-out"><strong>Log Out</strong></p>
-                        </section>
-                    </main>
-                </div>
-                
-                <div class="nav-bottom">
-                    <section class="nav-sub">
-                        <ul class="nav-picture">
-                            <img src={require("../images/raw-meat-photography_2.jpg")} alt="Meat banner" />
-                        </ul>
-                        <section class="nav-divider"></section>
-                    </section>
-                </div>
-            </body>
+                <section class="header">
+                    <div class="nav-bar">
+                        <div class="nav-bar-right">
+                            <section>
+                                <img src={require("../images/search-dark.png")} alt="search icon" />
+                            </section>
+                            <section>
+                                <p class="log-out"><strong>Log Out</strong></p>
+                            </section>
+                        </div>
+                    </div>
 
-            <div class="title-box">
-                <h1 class="main-title">Current Product List</h1>
-            </div>
-            
-            <div class="main-content">
-                <section class="content-top"> 
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Tray Size</th>
-                                <th scope="col">Type</th>
-                                <th scope="col">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {allMeats.map((meat, index) => {
-                                return (
-                                <tr key={meat._id}>
-                                    <td>{meat.name}</td>
-                                    <td>{meat.tray_size}</td>
-                                    <td>{meat.type}</td>
-                                    <td>
-                                        <Link to={`/meat/${meat._id}`}>
-                                            <button className="btn btn-primary">Details</button>
-                                        </Link>
+                    <div class="main-box">
+                        
+                            <div class="table-header">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Tray</th>
+                                            <th>Product</th>
+                                            <th>Description</th>
+                                            <th>Type</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table-content">
+                                <table>
+                                    <tbody>
+                                        {allMeats.map((meat, index) => {
+                                            return (
+                                            <tr key={meat._id}>
+                                                <td>{meat.tray_size}</td>
+                                                <td>{meat.name}</td>
+                                                <td>{meat.description}</td>
+                                                <td>{meat.type}</td>
+                                                <td>
+                                                    <Link to={`/meat/${meat._id}`}>
+                                                        <button className="table-button">Details</button>
+                                                    </Link>
 
-                                        <strong> | </strong>
+                                                    <Link to={`/edit/${meat._id}`}>
+                                                        <button className="table-button">Edit</button>
+                                                    </Link>
 
-                                        <Link to={`/edit/${meat._id}`}>
-                                            <button className="btn btn-primary">Edit</button>
-                                        </Link>
-                                    </td>
-                                </tr>
-                                );
-                            })}
-                        </tbody>
-                    </table>
+                                                    <button className="table-button">Delete</button>
+                                                </td>
+                                            </tr>
+                                        );
+                                        })}
+                                    </tbody>
+                                </table>
+                            </div>
+                        
+                        
+                    </div>
+                    <div class="table-ender">
+                        <Link to="/new"><button class="add-product"><strong>Add Product</strong></button></Link>
+                    </div>
                 </section>
-            </div>
-
-            <div class="product_buttons">
-            
-                <Link to="/new"><button class="add_product"><strong>Add Product</strong></button></Link>
-            
-                <button class="create_schematic"><strong>Create Schematic</strong></button>
-            </div>
+                
+                
+            </body>
         </>
     );
     };
