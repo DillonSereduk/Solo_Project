@@ -34,11 +34,7 @@ body {
   border-style: solid;
   border-color: black;
   box-shadow: 5px 5px black;
-  justify-content: right;
-}
-
-.nav-bar-right {
-  display:flex ;
+  
 }
 
 .create-schematic {
@@ -46,7 +42,15 @@ body {
 }
 
 .log-out {
-  font-size: 16px;
+  font-size: 18px;
+  margin-top: 13px;
+  padding-left: 1150px;
+}
+
+.search-icon {
+  width: 40px;
+  margin-left: 12px;
+  margin-top: 5px;
 }
 
 /* MAIN --------------------------------------------------------> */

@@ -38,13 +38,11 @@ const DisplayAll = () => {
             <body>
                 <section class="header">
                     <div class="nav-bar">
-                        <div class="nav-bar-right">
-                            <section>
-                                <img src={require("../images/search-dark.png")} alt="search icon" />
-                            </section>
-                            <section>
-                                <p class="log-out"><strong>Log Out</strong></p>
-                            </section>
+                        <section>
+                            <img class="search-icon" src={require("../images/search-dark.png")} alt="search icon" />
+                        </section>
+                        <div>
+                            <p class="log-out"><strong>Log Out</strong></p>
                         </div>
                     </div>
 
