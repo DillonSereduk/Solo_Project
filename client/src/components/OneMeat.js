@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {useNavigate, Link, useParams } from "react-router-dom";
+import "../Details.css";
 import axios from "axios";
 
 const OneMeat = (props) => {
@@ -19,7 +20,7 @@ const OneMeat = (props) => {
             });
     }, [id]); 
 
-    const deleteHandler = () => {
+    const handleDeleteMeat = () => {
         axios.delete(`http://localhost:8000/api/meat/${id}`)
             .then((res) => {
                 console.log(res);
@@ -33,71 +34,51 @@ const OneMeat = (props) => {
 
     return (
         <>
-            <body>
-                <div class="nav-top">
-                    <main class="nav">
-                        <section class="nav-left">
-                            <h1 class="nav-title"><strong>Meat Schematic Creator</strong></h1>
-                        </section>
-                        <section class="nav-right">
-                            <Link to="/"><p class="back-home"><strong>Home</strong></p></Link>
-                        </section>
+            <body class="body-display">
+                <section class="header">
+                    <div class="main-box">
+                            <div class="table-header">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Tray</th>
+                                            <th>Product</th>
+                                            <th>Description</th>
+                                            <th>Type</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="table-content">
+                                <table>
+                                    <tbody>
+                                                <td>{oneMeat.tray_size}</td>
+                                                <td>{oneMeat.name}</td>
+                                                <td>{oneMeat.description}</td>
+                                                <td>{oneMeat.type}</td>
+                                                <td>
+                                                    <Link to={`/edit/${oneMeat._id}`}>
+                                                        <button className="table-button">Edit</button>
+                                                    </Link>
 
-                        <strong> | </strong>
-                        
-                        <section class="nav-right">
-                            <p class="log-out"><strong>Log Out</strong></p>
-                        </section>
-                    </main>
-                </div>
-                
-                <div class="nav-bottom">
-                    <section class="nav-sub">
-                        <ul class="nav-picture">
-                            <img src={require("../images/raw-meat-photography_2.jpg")} alt="Meat banner" />
-                        </ul>
-                        <section class="nav-divider"></section>
-                    </section>
-                </div>
-            </body>
-
-            <div class="title-box">
-                <h1 class="main-title">Details About: {oneMeat.name}</h1>
-            </div>
-
-            <div class="main-content">
-                <section class="content-top"> 
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Tray Size</th>
-                                <th scope="col">Type</th>
-                            </tr>
-                        </thead>
-                        
-                        <tbody>
-                                <tr key={oneMeat._id}>
-                                    <td>{oneMeat.name}</td>
-                                    <td>{oneMeat.tray_size}</td>
-                                    <td>{oneMeat.type}</td>
-                                </tr>
-                        </tbody>
-                    </table>
+                                                    <button onClick={() => handleDeleteMeat(oneMeat._id)}className="danger-button">
+                                                        Delete
+                                                    </button>
+                                                </td>
+                                    </tbody>
+                                </table>
+                            </div>
+                    </div>
+                    <div class="button-pair">
+                            <Link to={`/`}>
+                                <button className="back-button">
+                                    Back
+                                </button>
+                            </Link>
+                    </div>
                 </section>
-                <table className="description">
-                    <thead>
-                            <tr>
-                                <th scope="col">Description</th>
-                            </tr>
-                    </thead>
-                    <tbody>
-                                <tr key={oneMeat._id}>
-                                    <td>{oneMeat.description}</td>
-                                </tr>
-                        </tbody>
-                </table>
-            </div>
+            </body>
         </>
     );
 };

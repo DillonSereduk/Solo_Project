@@ -1,6 +1,7 @@
 import "./Form.css";
 import "./App.css";
 import "./Edit.css";
+import "./Details.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DisplayAll from "./components/DisplayAll";
 import MeatForm from "./components/MeatForm";
