@@ -17,7 +17,7 @@ const MeatSchema = {
         minLength: [3, "Description must be at least 3 characters"],
     },
     tray_size: {
-        type: Number,
+        type: String,
         required: [true, "tray size is required"],
         minLength: [3, "tray size must be at least 3 character"],
         maxLength: [4, "tray size can be no more than 4 characters"]

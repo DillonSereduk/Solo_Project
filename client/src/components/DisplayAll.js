@@ -35,7 +35,7 @@ const DisplayAll = () => {
 
     return (
         <>
-            <body>
+            <body class="body-display">
                 <section class="header">
                     <div class="nav-bar">
                         <section>
@@ -47,7 +47,7 @@ const DisplayAll = () => {
                     </div>
 
                     <div class="main-box">
-                        
+
                             <div class="table-header">
                                 <table>
                                     <thead>
@@ -88,15 +88,11 @@ const DisplayAll = () => {
                                     </tbody>
                                 </table>
                             </div>
-                        
-                        
                     </div>
                     <div class="table-ender">
                         <Link to="/new"><button class="add-product"><strong>Add Product</strong></button></Link>
                     </div>
                 </section>
-                
-                
             </body>
         </>
     );
