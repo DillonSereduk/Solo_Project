@@ -122,12 +122,40 @@ td {
   border-radius: 25px;
 }
 
+.table-button:hover {
+  background: rgba(0,0,0,1);
+  color: white;
+  border: 1px solid white;
+  box-shadow: 2px 2px white
+}
+
+.danger-button {
+  height: 25px;
+  width: 70px;
+  border-style: solid;
+  border-color: black;
+  box-shadow: 2px 2px black;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: Andale Mono, monospace;
+  background-color: rgb(122, 221, 105);
+  text-transform: uppercase;
+  margin-left: 5px;
+  border-radius: 25px;
+}
+
+.danger-button:hover {
+  background: red;
+  color: white;
+  border: 2px solid rgba(0,0,0,1);
+}
+
 /* ENDER INSIDE MAIN -----------------------------------------------> */
 .table-ender {
   justify-content: cen;
 }
 
-.add-product {
+.add-product-button {
   height: 40px;
   width: 1300px;
   border-style: solid;
@@ -142,4 +170,8 @@ td {
   text-align: center;
   justify-content: center;
   margin-left: 55px;
+}
+
+.add-product-button:hover {
+  background-color: rgb(210, 225, 75);
 }

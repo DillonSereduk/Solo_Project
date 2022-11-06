@@ -80,7 +80,9 @@ const DisplayAll = () => {
                                                         <button className="table-button">Edit</button>
                                                     </Link>
 
-                                                    <button className="table-button">Delete</button>
+                                                    <button onClick={() => handleDeleteMeat(meat._id)}className="danger-button">
+                                                        Delete
+                                                    </button>
                                                 </td>
                                             </tr>
                                         );
@@ -90,7 +92,7 @@ const DisplayAll = () => {
                             </div>
                     </div>
                     <div class="table-ender">
-                        <Link to="/new"><button class="add-product"><strong>Add Product</strong></button></Link>
+                        <Link to="/new"><button class="add-product-button"><strong>Add Product</strong></button></Link>
                     </div>
                 </section>
             </body>

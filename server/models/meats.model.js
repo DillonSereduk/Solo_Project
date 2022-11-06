@@ -4,17 +4,17 @@ const MeatSchema = {
     name: {
         type: String,
         required: [true, "name of product is required"],
-        minLength: [3, "Name must be at least 3 characters"],
+        minLength: [4, "Name must be at least 4 characters"],
     },
     type: {
         type: String,
         required: [true, "type of meat is required"],
-        minLength: [3, "Type must be at least 3 characters"],
+        minLength: [4, "Type must be at least 4 characters"],
     },
     description: {
         type: String,
         required: [true, "product description is required"],
-        minLength: [3, "Description must be at least 3 characters"],
+        minLength: [10, "Description must be at least 10 characters"],
     },
     tray_size: {
         type: String,
