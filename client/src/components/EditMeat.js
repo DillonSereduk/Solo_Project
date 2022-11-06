@@ -104,10 +104,14 @@ const EditMeat = (props) => {
                                                 value={description}
                                             />
                                             {errors.description ? <p>{errors.description.message}</p> : null}
-                                            
-                                            <button className="create-product" type="submit">
-                                                Edit Product
-                                            </button>
+                                            <div class="button-pair">
+                                                <button className="back-button"><Link to="/">
+                                                    Back
+                                                </Link></button>
+                                                <button className="create-product" type="submit">
+                                                    Edit Product
+                                                </button>
+                                            </div>
                                         </form>
                         </div>
                     </div>

@@ -47,9 +47,13 @@ input:focus {
     border-bottom: 5px solid rgb(122, 221, 105);
 }
 
+.button-pair {
+    display: flex;
+}
+
 .create-product {
     height: 40px;
-    width: 300px;
+    width: 150px;
     display: block;
     border-style: solid;
     border-color: black;
@@ -65,6 +69,28 @@ input:focus {
 
 .create-product:hover {
     background-color: rgb(210, 225, 75);
+}
+
+.back-button {
+    height: 40px;
+    width: 100px;
+    display: block;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 2px 2px black;
+    font-size: 20px;
+    font-family: Andale Mono, monospace;
+    font-weight: 500;
+    background-color: rgb(122, 221, 105);
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+}
+
+.back-button:hover {
+    background: red;
+    color: white;
+    border: 2px solid rgba(0,0,0,1);
 }
 
 

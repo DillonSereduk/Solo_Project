@@ -72,11 +72,16 @@ import { Link, useNavigate } from "react-router-dom";
                                                 value={description}
                                             />
                                             {errors.description ? <p>{errors.description.message}</p> : null}
-                                            
-                                            <button className="create-product" type="submit">
-                                                Create Product
-                                            </button>
+                                            <div class="button-pair">
+                                                <Link to="/"><button className="back-button">
+                                                    Back
+                                                </button></Link>
+                                                <button className="create-product" type="submit">
+                                                    Create Product
+                                                </button>
+                                            </div>
                                         </form>
+                                        
                         </div>
                     </div>
                 </body>
