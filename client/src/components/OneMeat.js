@@ -35,8 +35,8 @@ const OneMeat = (props) => {
     return (
         <>
             <body class="body-display">
-                <section class="header">
-                    <div class="main-box">
+                <section class="details-header">
+                    <div class="details-main-box">
                             <div class="table-header">
                                 <table>
                                     <thead>
@@ -50,7 +50,7 @@ const OneMeat = (props) => {
                                     </thead>
                                 </table>
                             </div>
-                            <div class="table-content">
+                            <div class="details-table-content">
                                 <table>
                                     <tbody>
                                                 <td>{oneMeat.tray_size}</td>

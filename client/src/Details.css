@@ -10,10 +10,10 @@ body {
     font-family: Andale Mono, monospace;
 }
 
-.header {
+.details-header {
     margin: auto;
     margin-top: 60px;
-    height: 800px;
+    height: 700px;
     width: 1400px;
     background: rgb(27, 26, 26);
     padding: 20px;
@@ -63,7 +63,7 @@ h1{
     margin-bottom: 15px;
 }
 
-.main-box {
+.details-main-box {
     padding-top: 20px;
 }
 
@@ -77,7 +77,7 @@ table {
     border-radius: 25px 25px 0px 0px;
 }
 
-.table-content {
+.details-table-content {
     height:550px;
     overflow-x:auto;
     margin-top: 0px;
