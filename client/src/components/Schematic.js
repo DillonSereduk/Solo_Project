@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from "react";
-import {useNavigate, Link, useParams } from "react-router-dom";
-import "../Details.css";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import "../Schematic.css";
+import {useNavigate, Link, useParams } from "react-router-dom";
 
-const OneMeat = (props) => {
+const GetOneType = (props) => {
+    const { type } = useParams();
     const { id } = useParams();
     const navigate = useNavigate();
-    const [oneMeat, setOneMeat] = useState({});
-
+    const [oneType, setOneType] = useState({});
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/meat/${id}`)
+            .get(`http://localhost:8000/api/meatType/${type}`)
             .then((res) => {
                 console.log(res.data);
-                setOneMeat(res.data);
+                setOneType(res.data);
             })
             .catch((err) => {
                 console.log(err);
             });
-    }, [id]); 
+    }, [type]);
 
     const handleDeleteMeat = () => {
         axios.delete(`http://localhost:8000/api/meat/${id}`)
@@ -53,16 +53,16 @@ const OneMeat = (props) => {
                             <div class="details-table-content">
                                 <table>
                                     <tbody>
-                                                <td>{oneMeat.tray_size}</td>
-                                                <td>{oneMeat.name}</td>
-                                                <td>{oneMeat.description}</td>
-                                                <td>{oneMeat.type}</td>
+                                                <td>{oneType.tray_size}</td>
+                                                <td>{oneType.name}</td>
+                                                <td>{oneType.description}</td>
+                                                <td>{oneType.type}</td>
                                                 <td>
-                                                    <Link to={`/edit/${oneMeat._id}`}>
+                                                    <Link to={`/edit/${oneType._id}`}>
                                                         <button className="table-button">Edit</button>
                                                     </Link>
 
-                                                    <button onClick={() => handleDeleteMeat(oneMeat._id)}className="danger-button">
+                                                    <button onClick={() => handleDeleteMeat(oneType._id)}className="danger-button">
                                                         Delete
                                                     </button>
                                                 </td>
@@ -81,4 +81,4 @@ const OneMeat = (props) => {
     );
 };
 
-export default OneMeat;
+export default GetOneType;

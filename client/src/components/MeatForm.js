@@ -73,9 +73,9 @@ import { Link, useNavigate } from "react-router-dom";
                                             />
                                             {errors.description ? <p>{errors.description.message}</p> : null}
                                             <div class="button-pair">
-                                                <Link to="/"><button className="back-button">
+                                                <button className="back-button" onClick={()=>navigate(-1)}>
                                                     Back
-                                                </button></Link>
+                                                </button>
                                                 <button className="create-product" type="submit">
                                                     Create Product
                                                 </button>

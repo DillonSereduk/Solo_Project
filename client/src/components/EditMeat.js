@@ -105,9 +105,9 @@ const EditMeat = (props) => {
                                             />
                                             {errors.description ? <p>{errors.description.message}</p> : null}
                                             <div class="button-pair">
-                                                <button className="back-button"><Link to="/">
+                                                <button className="back-button" onClick={()=>navigate(-1)}>
                                                     Back
-                                                </Link></button>
+                                                </button>
                                                 <button className="create-product" type="submit">
                                                     Edit Product
                                                 </button>

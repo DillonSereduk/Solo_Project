@@ -2,28 +2,28 @@
 * {
     margin: 0;
     padding: 0;
-}
+  }
   /* LAYOUT -------------------------------------------------------> */
-
-body {
+  
+  body {
     background: linear-gradient(90deg,black 50%,rgb(122, 221, 105)50%);
     font-family: Andale Mono, monospace;
-}
-
-.details-header {
+  }
+  
+  .header {
     margin: auto;
     margin-top: 60px;
-    height: 700px;
+    height: 800px;
     width: 1400px;
     background: rgb(27, 26, 26);
     padding: 20px;
     border-radius: 10px;
     border-style: solid;
-}
-
+  }
+  
   /* NAVIGATION BAR -------------------------------------------------------> */
-
-.nav-bar {
+  
+  .nav-bar {
     margin: auto;
     text-align: center;
     height: 50px;
@@ -34,50 +34,50 @@ body {
     border-style: solid;
     border-color: black;
     box-shadow: 5px 5px black;
-}
-
-.create-schematic {
+  }
+  
+  .create-schematic {
     padding-left: 50px;
-}
-
-.log-out {
+  }
+  
+  .log-out {
     font-size: 18px;
     margin-top: 13px;
     padding-left: 1150px;
-}
-
-.search-icon {
+  }
+  
+  .search-icon {
     width: 40px;
     margin-left: 12px;
     margin-top: 5px;
-}
-
+  }
+  
   /* MAIN --------------------------------------------------------> */
-
-h1{
+  
+  h1{
     font-size: 30px;
     color: white;
     text-transform: uppercase;
     font-weight: 300;
     text-align: center;
     margin-bottom: 15px;
-}
-
-.details-main-box {
+  }
+  
+  .main-box {
     padding-top: 20px;
-}
-
-table {
+  }
+  
+  table {
     width: 1300px;
     table-layout: fixed;
-}
-
-.table-header {
+  }
+  
+  .table-header {
     background-color: rgb(122, 221, 105);
     border-radius: 25px 25px 0px 0px;
-}
-
-.details-table-content {
+  }
+  
+  .table-content {
     height:550px;
     overflow-x:auto;
     margin-top: 0px;
@@ -85,18 +85,18 @@ table {
     border-color: black;
     background-color: rgb(53, 51, 51);
     border-radius: 0px 0px 25px 25px;
-}
-
-th {
+  }
+  
+  th {
     padding: 20px 15px;
     text-align: left;
     font-weight: 1000;
     font-size: 30px;
     color: white;
     text-transform: uppercase;
-}
-
-td {
+  }
+  
+  td {
     padding: 15px;
     text-align: left;
     vertical-align:middle;
@@ -104,9 +104,9 @@ td {
     font-size: 16px;
     color: #fff;
     border-bottom: solid 1px rgba(255,255,255,0.1);
-}
-
-.table-button {
+  }
+  
+  .table-button {
     height: 25px;
     width: 70px;
     border-style: solid;
@@ -151,32 +151,51 @@ td {
 
   /* ENDER INSIDE MAIN -----------------------------------------------> */
 .table-ender {
-    justify-content: center;
+    justify-content: cen;
 }
 
-.button-pair {
-    justify-content: center;
-}
-
-.details-back-button {
+.add-product-button {
     height: 40px;
-    width: 400px;
-    display: block;
+    width: 1300px;
     border-style: solid;
     border-color: black;
     box-shadow: 2px 2px black;
     font-size: 20px;
-    font-family: Andale Mono, monospace;
     font-weight: 500;
+    font-family: Andale Mono, monospace;
     background-color: rgb(122, 221, 105);
     text-transform: uppercase;
-    text-align: center;
-    margin: auto;
     margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 55px;
 }
 
-.details-back-button:hover {
-    background: red;
-    color: white;
-    border: 2px solid rgba(0,0,0,1);
+.add-product-button:hover {
+    background-color: rgb(210, 225, 75);
+}
+
+.meat-types {
+    display: flex;
+    justify-content: center;
+}
+.meat-type-button {
+    height: 40px;
+    width: 300px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 2px 2px black;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Andale Mono, monospace;
+    background-color: rgb(122, 221, 105);
+    text-transform: uppercase;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 55px;
+}
+
+.meat-type-button:hover {
+    background-color: rgb(210, 225, 75);
 }

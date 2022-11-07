@@ -4,6 +4,7 @@ import "../App.css";
 import { Link } from "react-router-dom";
 
 const DisplayAll = () => {
+    const meats=["Chicken", "Pork", "Beef"];
     const [allMeats, setAllMeats] = useState([]);
     useEffect(() => {
         axios
@@ -93,6 +94,11 @@ const DisplayAll = () => {
                     </div>
                     <div class="table-ender">
                         <Link to="/new"><button class="add-product-button"><strong>Add Product</strong></button></Link>
+                    </div>
+                    <div class="meat-types">
+                        <Link to={`/meatType/Chicken`}><button class="meat-type-button"><strong>Chicken</strong></button></Link>
+                        <Link to={`/meatType/Pork`}><button class="meat-type-button"><strong>Pork</strong></button></Link>
+                        <Link to={`/meatType/Beef`}><button class="meat-type-button"><strong>Beef</strong></button></Link>
                     </div>
                 </section>
             </body>

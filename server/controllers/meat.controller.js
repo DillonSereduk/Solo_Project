@@ -30,6 +30,17 @@ const getOneMeat = (req, res) => {
         });
 };
 
+const getOneType = (req, res) => {
+    Meat.find({ type: {$regex: new RegExp('^' + req.params.type.toLowerCase(), 'i')}})
+        .then((queriedMeat) => {
+            res.json(queriedMeat);
+            console.log(queriedMeat);
+        })
+        .catch((err) => {
+            res.status(400).json({ err });
+        });
+};
+
 const updateMeat = (req, res) => {
     Meat.findOneAndUpdate({ _id: req.params.id }, req.body, {
         new: true,
@@ -59,4 +70,5 @@ module.exports = {
     getAllMeats,
     updateMeat,
     deleteExistingUser,
+    getOneType,
 };
