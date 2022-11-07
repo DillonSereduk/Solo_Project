@@ -7,7 +7,7 @@ const GetOneType = (props) => {
     const { type } = useParams();
     const { id } = useParams();
     const navigate = useNavigate();
-    const [oneType, setOneType] = useState({});
+    const [oneType, setOneType] = useState([]);
     useEffect(() => {
         axios
             .get(`http://localhost:8000/api/meatType/${type}`)
@@ -51,21 +51,31 @@ const GetOneType = (props) => {
                                 </table>
                             </div>
                             <div class="details-table-content">
-                                <table>
+                            <table>
                                     <tbody>
-                                                <td>{oneType.tray_size}</td>
-                                                <td>{oneType.name}</td>
-                                                <td>{oneType.description}</td>
-                                                <td>{oneType.type}</td>
+                                        {oneType.map((meat, index) => {
+                                            return (
+                                            <tr key={meat._id}>
+                                                <td>{meat.tray_size}</td>
+                                                <td>{meat.name}</td>
+                                                <td>{meat.description}</td>
+                                                <td>{meat.type}</td>
                                                 <td>
-                                                    <Link to={`/edit/${oneType._id}`}>
+                                                    <Link to={`/meat/${meat._id}`}>
+                                                        <button className="table-button">Details</button>
+                                                    </Link>
+
+                                                    <Link to={`/edit/${meat._id}`}>
                                                         <button className="table-button">Edit</button>
                                                     </Link>
 
-                                                    <button onClick={() => handleDeleteMeat(oneType._id)}className="danger-button">
+                                                    <button onClick={() => handleDeleteMeat(meat._id)}className="danger-button">
                                                         Delete
                                                     </button>
                                                 </td>
+                                            </tr>
+                                        );
+                                        })}
                                     </tbody>
                                 </table>
                             </div>
